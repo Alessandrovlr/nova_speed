@@ -1,4 +1,4 @@
-/* css do header e itens incluso*/
+@charset "UTF-8";
 
 #img-logo{
     width: 45px;
@@ -33,10 +33,4 @@ header {
    font-size: medium;
    padding: 10px;
    border-radius: 9px;
-}
-
-/* comeco css do body*/
-
-.texto-inicial{
-    
 }
