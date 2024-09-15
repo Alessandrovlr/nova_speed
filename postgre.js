@@ -56,7 +56,12 @@ const popularTabelas = async () => {
   const data_nascimento = document.getElementById('data_nascimento').value;
 
   const numero_telefone = document.getElementById('numero_telefone').value;
-  const ddd = document.getElementById('ddd').value;
+
+  for(let i = 0; i < 2; i++){
+    let dddGet = "";
+    dddGet += numero_telefone[i];  
+  }
+  const ddd = dddGet;
 
   const logradouro = document.getElementById('logradouro').value;
   const bairro = document.getElementById('bairro').value;
