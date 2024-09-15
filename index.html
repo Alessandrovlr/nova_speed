@@ -12,32 +12,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <div id="logo-container">
-            <img id="img-logo" src="../imagens/logo.png" alt="Logo">
-            <h2 id="texto-logo">Nova<span style="color: red;">Speed</span></h2>
+
+<div class="container"> 
+    <header class="text-center d-flex flex-column flex-md-row flex-wrap justify-content-center justify-content-md-between align-items-center py-3 mb-4">
+        <section class="d-flex flex-column flex-md-row align-items-center mb-3 mb-md-0 me-md-auto">
+            <img class="bi me-2 mb-3" src="imagens/logo.png" alt="logo da página" style="max-width: 100px;">
+            <h2 id="texto-logo" class="text-center text-md-start">Nova<span style="color: red;">Speed</span></h2>
+        </section>
+
+        <ul class="nav">
+            <li class="nav-item">
+                <button id="botao-entrar" class="btn btn-primary">Entrar</button>
+            </li>
+        </ul>
+    </header>
+</div>
+
+<article class="container">
+    <div class="row align-items-center">
+        <div class="col-lg-7 col-md-">
+            <h1>Somos o melhor lugar <br>
+                para você <span style="color: red;">comprar seu carro</span>.</h1>
+        
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate incidunt placeat nemo ad odio,
+                dolorem voluptatem suscipit, vero nam! Similique aliquam minus amet mollitia quia.
+            </p>
+        
+            <button>Compre seu carro</button>
         </div>
-        <button id="botao-entrar">entrar</button>
-    </header>    
 
-    <div class="texto-inicial">
-        <h1>Somos o melhor lugar <br>
-            para você <span style="color: red;">comprar seu carro</span>.</h1>
-
-        <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate incidunt placeat nemo ad odio,
-            dolorem voluptatem suscipit, vero nam! Similique aliquam minus amet mollitia quia.
-        </p>
-
-        <button>Compre seu carro</button>
+        <div class="col-lg-5 text-center my-4">
+            <img class="img-fluid" src="https://placehold.co/600x400" alt="">
+        </div>
     </div>
-
-
-    <img src="" alt="">
-
+</article>
 
 </body>
+    <!--Script do Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!--Script adicionais-->
+    <script src="../main.js" defer></script>
 </html>
 
-<script src="../main.js" defer></script>

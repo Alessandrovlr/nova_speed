@@ -1,29 +1,11 @@
 @charset "UTF-8";
 
-#img-logo{
-    width: 45px;
-}
-
 #texto-logo{
     font-family: "Bruno Ace SC", sans-serif;
     font-weight: 400;
     font-size: xx-large;
     font-style: normal;
     color: black;
-}
-
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-right: 20em;
-    margin-left: 20em;
-}
-
-#logo-container {
-    display: flex;
-    align-items: center;
 }
 
 #botao-entrar{
@@ -33,4 +15,9 @@ header {
    font-size: medium;
    padding: 10px;
    border-radius: 9px;
+}
+
+#botao-entrar:hover{
+    background-color: rgba(255, 0, 0, 0.5);
+    transition: all 0.2s;
 }
