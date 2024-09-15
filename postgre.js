@@ -14,10 +14,10 @@ client.connect()
   .catch(err => console.error('Erro ao conectar ao banco de dados:', err));
 
 // Função para inserir cliente
-const inserirCliente = async (nome, sobrenome, adm, data_nascimento) => {
-  const query = 'INSERT INTO cliente (nome, sobrenome, adm, data_nascimento) VALUES ($1, $2, $3, $4) RETURNING cod_cli';
+const inserirCliente = async (nome, sobrenome, data_nascimento) => {
+  const query = 'INSERT INTO cliente (nome, sobrenome, data_nascimento) VALUES ($1, $2, $3) RETURNING cod_cli';
   try {
-    const res = await client.query(query, [nome, sobrenome, adm, data_nascimento]);
+    const res = await client.query(query, [nome, sobrenome, data_nascimento]);
     return res.rows[0].cod_cli;  // Retorna o cod_cli do cliente recém-inserido
   } catch (err) {
     console.error('Erro ao inserir cliente: ', err);
@@ -52,7 +52,6 @@ const popularTabelas = async () => {
   // Aqui você capturaria os valores do HTML (formulário). Como exemplo, vamos usar valores fixos.
   const nome = document.getElementById('nome').value;
   const sobrenome = document.getElementById('sobrenome').value;
-  const adm = document.getElementById('adm').checked;  // Checkbox para admin
   const data_nascimento = document.getElementById('data_nascimento').value;
 
   const numero_telefone = document.getElementById('numero_telefone').value;
@@ -72,7 +71,7 @@ const popularTabelas = async () => {
 
   try {
     // Inserir cliente e obter o cod_cli
-    const cod_cli = await inserirCliente(nome, sobrenome, adm, data_nascimento);
+    const cod_cli = await inserirCliente(nome, sobrenome, data_nascimento);
 
     // Inserir telefone relacionado ao cliente
     await inserirTelefone(numero_telefone, ddd, cod_cli);
