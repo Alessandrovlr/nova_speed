@@ -14,14 +14,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
 </head>
 <body class="d-flex align-items-center justify-content-center" style="min-height: 100vh;">
-    
+<main>
 <form>
     <section class="d-flex align-items-center">
         <img class="me-2 mb-3" src="imagens/logo.png" alt="logo da página" style="max-width: 100px;">
         <h2 id="texto-logo">Nova<span style="color: red;">Speed</span></h2>
     </section>
 
-    <h1 class="text-center mb-3">Entrar</h1>
+    <h1 class="text-center my-3">Entrar</h1>
     
     <!--OUTRAS FORMAS DE ENTRAR-->
     <div class="d-flex justify-content-evenly mb-3">
@@ -45,27 +45,35 @@
         </a>
     </div>
 
-    <div class="form-floating mb-2">
+    <div class="form-floating my-2">
         <input type="email" class="form-control" id="floatingInput" placeholder="E-mail" required>
         <label for="floatingInput">Email</label>
+        <div class="invalid-feedback">
+            Insira um E-mail.
+        </div>
     </div>
 
     <div class="form-floating">
         <input type="password" class="form-control" placeholder="Senha" id="floatingInput" required>
         <label for="floatingInput">Senha</label>
+        <div class="invalid-feedback">
+            Insira uma Senha.
+        </div>
     </div>
+    
     
     <div class="form-check my-3">
         <input type="checkbox" class="form-check-input" value="remember-me" id="flexCheckDefault">
         <label class="form-check-label" for="flexCheckDefault">Lembrar de mim</label>
+        <a href="#" class="ms-3">Esqueceu sua senha?</a>
 
     </div>
 
     <button type="submit" class="w-100 btn btn-primary p-2">Entrar</button>
 
-    <p class="text-center mt-3"><a href="#">Esqueceu sua senha?</a></p>
-    <p>Não possui uma conta? <a href="#">Crie uma conta</a></p>
+    <p class="text-center my-3">Não possui uma conta? <a href="#">Crie uma conta</a></p>
 </form>
+</main>
 
 <!--Script do Bootstrap-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

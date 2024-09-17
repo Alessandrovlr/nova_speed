@@ -1,94 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário Cliente</title>
+    <title>NovaSpeed</title>
+    <!--Bootstrap link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--Estilo do maluco-->
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <form id="formulario">
-        <h2>Informações do Cliente</h2>
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required><br>
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <main class="w-100" style="max-width: 600px;">
+            <div class="row g-5">
+                <div class="col-md-12">
+                    <form class="needs-validation">
+                        <div class="row g-3">
+                            <!--NOME-->
+                            <div class="col-sm-6">
+                                <label class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="firstName" required>
+                                <div class="invalid-feedback">
+                                    Campo obrigatório.
+                                </div>
+                            </div>
+                            <!--SOBRENOME-->
+                            <div class="col-sm-6">
+                                <label class="form-label">Sobrenome</label>
+                                <input type="text" class="form-control" id="lastName" required>
+                                <div class="invalid-feedback">
+                                    Campo obrigatório.
+                                </div>
+                            </div>
+                            <!--EMAIL-->
+                            <div class="col-12">
+                                <label class="form-label">E-mail</label>
+                                <input type="email" class="form-control" id="email" placeholder="E-mail" required>
+                                <div class="invalid-feedback">
+                                    Campo obrigatório.
+                                </div>
+                            </div>
+                            <!--SENHA-->
+                            <div class="col-12">
+                                <label class="form-label">Senha</label>
+                                <input type="password" class="form-control" placeholder="Senha" required>
+                                <div class="invalid-feedback">
+                                    Campo obrigatório.
+                                </div>
+                            </div>
+                            <!--DATA DE NASCIMENTO-->
+                            <div class="col-12">
+                                <label class="form-label">Data de nascimento</label>
+                                <input type="date" class="form-control" required>
+                                <div class="invalid-feedback">
+                                    Campo obrigatório.
+                                </div>
+                            </div>
+                            <!--TELEFONE-->
+                            <div class="col-12">
+                                <label class="form-label">Telefone com DDD</label>
+                                <input type="tel" class="form-control" placeholder="+55 (XX) XXXX-XXXX" required>
+                            </div>
+                            <!--ENDEREÇO-->
+                            <div class="col-12">
+                                <label class="form-label">CEP</label>
+                                <input type="text" class="form-control" id="cep" placeholder="Digite o CEP" required>
+                                <div class="invalid-feedback">
+                                    Campo obrigatório.
+                                </div>
+                            </div>
 
-        <label for="sobrenome">Sobrenome:</label>
-        <input type="text" id="sobrenome" name="sobrenome" required><br>
+                            <div class="col-12">
+                                <label class="form-label">Logradouro</label>
+                                <input type="text" class="form-control" id="logradouro" placeholder="Digite o logradouro" required>
+                                <div class="invalid-feedback">
+                                    Campo obrigatório.
+                                </div>
+                            </div>
 
-        <label for="data_nascimento">Data de Nascimento:</label>
-        <input type="date" id="data_nascimento" name="data_nascimento" required><br>
+                            <div class="col-6">
+                                <label class="form-label">Cidade</label>
+                                <input type="text" class="form-control" id="cidade" placeholder="Digite a cidade" required>
+                                <div class="invalid-feedback">
+                                    Campo obrigatório.
+                                </div>
+                            </div>
 
-        <h2>Informações de Telefone</h2>
-        <label for="numero_telefone">Número de Telefone:</label>
-        <input type="text" id="numero_telefone" name="numero_telefone" required><br>
+                            <div class="col-6">
+                                <label class="form-label">Bairro</label>
+                                <input type="text" class="form-control" id="bairro" placeholder="Digite o bairro" required>
+                                <div class="invalid-feedback">
+                                    Campo obrigatório.
+                                </div>
+                            </div>
 
-        <h2>Endereço</h2>
-        <label for="logradouro">Logradouro:</label>
-        <input type="text" id="logradouro" name="logradouro" required><br>
+                            <div class="col-12">
+                                <label class="form-label">UF</label>
+                                <select class="form-select" id="uf" required>
+                                    <option value="">Selecione o estado</option>
+                                    <option value="AC">Acre</option>
+                                    <option value="AL">Alagoas</option>
+                                    <option value="AP">Amapá</option>
+                                    <option value="AM">Amazonas</option>
+                                    <option value="BA">Bahia</option>
+                                    <option value="CE">Ceará</option>
+                                    <option value="DF">Distrito Federal</option>
+                                    <option value="ES">Espírito Santo</option>
+                                    <option value="GO">Goiás</option>
+                                    <option value="MA">Maranhão</option>
+                                    <option value="MT">Mato Grosso</option>
+                                    <option value="MS">Mato Grosso do Sul</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="PA">Pará</option>
+                                    <option value="PB">Paraíba</option>
+                                    <option value="PR">Paraná</option>
+                                    <option value="PE">Pernambuco</option>
+                                    <option value="PI">Piauí</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="RN">Rio Grande do Norte</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="RO">Rondônia</option>
+                                    <option value="RR">Roraima</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="SE">Sergipe</option>
+                                    <option value="TO">Tocantins</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Selecione um estado.
+                                </div>
+                            </div>
 
-        <label for="bairro">Bairro:</label>
-        <input type="text" id="bairro" name="bairro" required><br>
+                            <div class="col-12">
+                                <label class="form-label">Complemento (opcional)</label>
+                                <input type="text" class="form-control" id="complemento" placeholder="Digite o complemento">
+                            </div>
+                        </div>
 
-        <label for="cidade">Cidade:</label>
-        <input type="text" id="cidade" name="cidade" required><br>
-
-        <label for="cep">CEP:</label>
-        <input type="text" id="cep" name="cep" required><br>
-
-        <label for="uf">UF:</label>
-        <input type="text" id="uf" name="uf" required><br>
-
-        <label for="complemento">Complemento:</label>
-        <input type="text" id="complemento" name="complemento"><br>
-
-        <button type="submit">Enviar</button>
-    </form>
-
-    <script>
-        document.getElementById('formulario').addEventListener('submit', function (event) {
-            event.preventDefault(); // Evita o comportamento padrão do formulário
-
-            // Captura os valores do formulário
-            const nome = document.getElementById('nome').value;
-            const sobrenome = document.getElementById('sobrenome').value;
-            const data_nascimento = document.getElementById('data_nascimento').value;
-            const numero_telefone = document.getElementById('numero_telefone').value;
-            const logradouro = document.getElementById('logradouro').value;
-            const bairro = document.getElementById('bairro').value;
-            const cidade = document.getElementById('cidade').value;
-            const cep = document.getElementById('cep').value;
-            const uf = document.getElementById('uf').value;
-            const complemento = document.getElementById('complemento').value;
-
-            // Monta o objeto com os dados
-            const dadosCliente = {
-                nome,
-                sobrenome,
-                data_nascimento,
-                numero_telefone,
-                logradouro,
-                bairro,
-                cidade,
-                cep,
-                uf,
-                complemento
-            };
-
-            // Envia os dados para o servidor usando fetch
-            fetch('http://localhost:3000/inserir-cliente', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(dadosCliente),
-            })
-            .then(response => response.text())
-            .then(data => {
-                alert(data); // Exibe a resposta do servidor
-            })
-            .catch((error) => {
-                console.error('Erro:', error);
-            });
-        });
-    </script>
+                        <button type="submit" class="w-100 btn btn-primary p-2 my-4">Entrar</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>           
+<!--Script do Bootstrap-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!--Script adicionais-->
+<script src="main.js" defer></script>
 </body>
 </html>
